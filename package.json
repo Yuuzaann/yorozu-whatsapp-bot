@@ -1,0 +1,28 @@
+{
+  "name": "yorozu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bot WhatsApp ringan untuk downloader media, sticker, dan command sistem.",
+  "license": "MIT",
+  "keywords": [
+    "whatsapp-bot",
+    "baileys",
+    "media-downloader",
+    "sticker"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "axios": "^1.20.0",
+    "dotenv": "^17.4.2",
+    "pino": "^9.14.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
