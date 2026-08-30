@@ -2,6 +2,28 @@
 
 > **Simple. Fast. Useful.**
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Baileys-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Baileys">
+  <img src="https://img.shields.io/badge/pnpm-supported-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Yuuzaann/yorozu">
+    <img src="https://img.shields.io/github/stars/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Stars" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/Yuuzaann/yorozu/issues">
+    <img src="https://img.shields.io/github/issues/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Issues" alt="GitHub Issues">
+  </a>
+  <img src="https://img.shields.io/github/repo-size/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Repo%20Size" alt="Repository Size">
+</p>
+
+<p align="center">
+  <b>🇮🇩 Bahasa Indonesia</b> ·
+  <a href="#-english">🇬🇧 English</a>
+</p>
+
 YOROZU adalah bot WhatsApp berbasis **Node.js + Baileys** untuk mengunduh media TikTok/YouTube, membuat sticker, dan menjalankan command utility sederhana.
 
 > README ini tersedia dalam Bahasa Indonesia dan English.
@@ -633,7 +655,6 @@ Developer tidak bertanggung jawab atas:
 
 ---
 
-
 # 🇬🇧 English
 
 YOROZU is a **Node.js + Baileys** WhatsApp bot for media downloading, sticker creation, and lightweight utility commands.
@@ -1235,9 +1256,9 @@ git diff --check
 
 # ⚖️ Usage & Disclaimer
 
-YOROZU is intended for educational and personal use.
+YOROZU is intended for **educational and personal use**.
 
-Only download media that you own or have permission to access and download.
+Only download media that you own or are authorized to access and download.
 
 The developer is not responsible for:
 
@@ -1248,3 +1269,10 @@ The developer is not responsible for:
 
 ---
 
+<p align="center">
+
+**🌙 YOROZU**
+
+*Simple. Fast. Useful.*
+
+</p>
