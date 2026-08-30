@@ -1,0 +1,3 @@
+**Pastikan baca `README.md` terlebih dahulu sebelum memulai.**
+
+**Make sure to read `README.md` before getting started.**
