@@ -633,11 +633,6 @@ Developer tidak bertanggung jawab atas:
 
 ---
 
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
----
 
 # 🇬🇧 English
 
@@ -1253,6 +1248,3 @@ The developer is not responsible for:
 
 ---
 
-# 📄 License
-
-This project is licensed under the **MIT License**.
