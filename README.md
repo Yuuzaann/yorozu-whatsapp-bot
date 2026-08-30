@@ -10,16 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Yuuzaann/yorozu">
-    <img src="https://img.shields.io/github/stars/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Stars" alt="GitHub Stars">
-  </a>
-  <a href="https://github.com/Yuuzaann/yorozu/issues">
-    <img src="https://img.shields.io/github/issues/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Issues" alt="GitHub Issues">
-  </a>
-  <img src="https://img.shields.io/github/repo-size/Yuuzaann/yorozu?style=for-the-badge&logo=github&label=Repo%20Size" alt="Repository Size">
-</p>
-
-<p align="center">
   <b>🇮🇩 Bahasa Indonesia</b> ·
   <a href="#-english">🇬🇧 English</a>
 </p>
