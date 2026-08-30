@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
   <img src="https://img.shields.io/badge/Baileys-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Baileys">
   <img src="https://img.shields.io/badge/pnpm-supported-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
 </p>
 
 <p align="center">
