@@ -1,25 +1,14 @@
 # 🌙 YOROZU WhatsApp Bot
 
 > **Simple. Fast. Useful.**
->
-> YOROZU is a Node.js WhatsApp bot built with **Baileys** for media downloading, sticker creation, and lightweight utility commands.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Baileys-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Baileys">
-  <img src="https://img.shields.io/badge/pnpm-supported-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
-</p>
+YOROZU adalah bot WhatsApp berbasis **Node.js + Baileys** untuk mengunduh media TikTok/YouTube, membuat sticker, dan menjalankan command utility sederhana.
 
-<p align="center">
-  🇮🇩 Bahasa Indonesia · 🇬🇧 English
-</p>
+> README ini tersedia dalam Bahasa Indonesia dan English.
 
 ---
 
 # 🇮🇩 Bahasa Indonesia
-
-YOROZU adalah bot WhatsApp berbasis **Node.js + Baileys** untuk mengunduh media TikTok/YouTube, membuat sticker, dan menjalankan command utility sederhana.
 
 ## ✨ Fitur
 
@@ -31,7 +20,7 @@ YOROZU adalah bot WhatsApp berbasis **Node.js + Baileys** untuk mengunduh media 
 * 🖼️ Membuat sticker dari gambar
 * 🎞️ Membuat sticker dari GIF/video pendek
 * 📝 Membuat text/meme sticker
-* 📡 `/ping` untuk status & latency
+* 📡 `/ping` untuk mengecek status dan latency bot
 * 🛡️ Per-command cooldown
 * 🚦 Global cooldown
 * 🔒 Duplicate request protection
@@ -41,32 +30,70 @@ YOROZU adalah bot WhatsApp berbasis **Node.js + Baileys** untuk mengunduh media 
 
 ---
 
-## 📋 Commands
+## 📋 Daftar Command
 
 ### 📥 Downloader
 
-| Command         | Description                |
+| Command         | Deskripsi                  |
 | --------------- | -------------------------- |
 | `/tiktok <url>` | Download video/foto TikTok |
 | `/ytmp3 <url>`  | Download audio YouTube     |
 | `/ytmp4 <url>`  | Download video YouTube     |
 
+#### `/tiktok`
+
+Mendukung:
+
+* Video TikTok publik
+* Foto TikTok
+* Photo carousel
+
+Contoh:
+
+```text
+/tiktok https://www.tiktok.com/@user/video/123456789
+```
+
+#### `/ytmp3`
+
+Mengunduh audio dari YouTube dalam format MP3.
+
+```text
+/ytmp3 https://www.youtube.com/watch?v=xxxxxxxxxxx
+```
+
+#### `/ytmp4`
+
+Mengunduh video dari YouTube dalam format MP4.
+
+```text
+/ytmp4 https://youtu.be/xxxxxxxxxxx
+```
+
+---
+
 ### 🎨 Sticker
 
-| Command                 | Description         |
-| ----------------------- | ------------------- |
-| `/sticker`              | Create sticker      |
-| `/s`                    | Shortcut sticker    |
-| `/stiker`               | Shortcut sticker    |
-| `/createsticker <text>` | Create text sticker |
+| Command                 | Deskripsi            |
+| ----------------------- | -------------------- |
+| `/sticker`              | Membuat sticker      |
+| `/s`                    | Shortcut sticker     |
+| `/stiker`               | Shortcut sticker     |
+| `/createsticker <text>` | Membuat text sticker |
 
-Untuk `/sticker`, kamu dapat mengirim gambar/GIF/video bersama command atau reply media tersebut.
+Untuk `/sticker`, kamu dapat:
 
-Batas default:
+* Mengirim gambar bersama command
+* Mengirim GIF bersama command
+* Mengirim video pendek bersama command
+* Reply gambar/GIF/video lalu gunakan `/sticker`
 
-* Video/GIF: **10 detik**
-* Input sticker: **10 MB**
-* Text sticker: **120 karakter**
+### Default Limit
+
+| Type       |    Limit |
+| ---------- | -------: |
+| Video/GIF  | 10 detik |
+| Input file |    10 MB |
 
 Contoh:
 
@@ -74,9 +101,11 @@ Contoh:
 /createsticker Waduh, ketahuan!
 ```
 
+---
+
 ### ⚙️ System
 
-| Command | Description                     |
+| Command | Deskripsi                       |
 | ------- | ------------------------------- |
 | `/menu` | Menampilkan daftar command      |
 | `/help` | Menampilkan panduan penggunaan  |
@@ -95,11 +124,9 @@ Sebelum menjalankan YOROZU, pastikan komputer sudah memiliki:
 * **Visual Studio Code** *(direkomendasikan untuk development)*
 * Akun WhatsApp untuk pairing
 
-> 💡 YOROZU dapat dijalankan langsung melalui **Visual Studio Code**. VS Code hanya digunakan sebagai code editor dan terminal; bot tetap berjalan menggunakan Node.js.
+### Check Requirements
 
-### Cek Requirement
-
-Buka terminal VS Code dan jalankan:
+Buka terminal di VS Code dan jalankan:
 
 ```bash
 node --version
@@ -114,28 +141,17 @@ Jika semua command menampilkan versi, environment sudah siap.
 
 # 💻 Menjalankan YOROZU di VS Code
 
-YOROZU dapat dijalankan langsung dari **Visual Studio Code**.
+YOROZU dapat dikembangkan dan dijalankan langsung menggunakan **Visual Studio Code**.
 
 ## 1. Buka Repository
 
-Buka folder repository YOROZU menggunakan VS Code:
+Buka folder project menggunakan:
 
 ```text
 File → Open Folder
 ```
 
-Kemudian pilih folder project.
-
-Struktur project kurang lebih:
-
-```text
-yorozu/
-├── src/
-├── .env.example
-├── package.json
-├── auth/
-└── temp/
-```
+Kemudian pilih folder repository YOROZU.
 
 ---
 
@@ -147,19 +163,13 @@ Gunakan:
 Terminal → New Terminal
 ```
 
-Atau shortcut:
+atau shortcut:
 
 ```text
 Ctrl + `
 ```
 
 Pastikan terminal berada di folder repository.
-
-Cek:
-
-```bash
-node --version
-```
 
 ---
 
@@ -171,7 +181,7 @@ Dari root repository:
 pnpm install
 ```
 
-Jika package bot berada di folder `yorozu`:
+Atau jika bot berada di dalam folder `yorozu`:
 
 ```bash
 cd yorozu
@@ -180,67 +190,59 @@ pnpm install
 
 ---
 
-## 4. Buat File Environment
+## 4. Buat File `.env`
 
-Salin `.env.example` menjadi `.env`.
+Buat file bernama:
 
-Linux/macOS:
-
-```bash
-cp .env.example .env
+```text
+.env
 ```
 
-Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Kemudian sesuaikan konfigurasi jika diperlukan.
-
----
-
-# ⚙️ Configuration
-
-Semua konfigurasi bersifat opsional. Jika tidak diisi, nilai default akan digunakan.
-
-| Variable                  |  Default | Description                     |
-| ------------------------- | -------: | ------------------------------- |
-| `BOT_NAME`                | `YOROZU` | Nama device WhatsApp            |
-| `MAX_CONCURRENT_JOBS`     |      `2` | Maksimal proses berat bersamaan |
-| `REQUEST_TIMEOUT`         |  `30000` | Timeout downloader (ms)         |
-| `STICKER_MAX_DURATION`    |     `10` | Maksimal durasi sticker (detik) |
-| `STICKER_MAX_SIZE_MB`     |     `10` | Maksimal ukuran input sticker   |
-| `TEXT_STICKER_MAX_LENGTH` |    `120` | Maksimal karakter text sticker  |
-| `GLOBAL_COOLDOWN`         |      `3` | Global cooldown user (detik)    |
-| `TEMP_DIR`                | `./temp` | Directory file sementara        |
-| `AUTH_DIR`                | `./auth` | Directory session WhatsApp      |
-| `DOWNLOADER_MAX_SIZE_MB`  |     `50` | Maksimal ukuran media download  |
-| `LOG_LEVEL`               |   `info` | Level Pino logger               |
-
-Contoh `.env`:
+Kemudian isi dengan konfigurasi berikut:
 
 ```env
 BOT_NAME=YOROZU
+
 MAX_CONCURRENT_JOBS=2
+
 REQUEST_TIMEOUT=30000
+
 STICKER_MAX_DURATION=10
+
 STICKER_MAX_SIZE_MB=10
-TEXT_STICKER_MAX_LENGTH=120
+
 GLOBAL_COOLDOWN=3
+
 TEMP_DIR=./temp
+
 AUTH_DIR=./auth
+
+DOWNLOADER_API_URL=
+
+DOWNLOADER_API_KEY=
+
 DOWNLOADER_MAX_SIZE_MB=50
-LOG_LEVEL=info
 ```
 
-> ⚠️ Jangan upload `.env` ke repository GitHub.
+### Configuration
+
+| Variable                 |  Default | Deskripsi                                      |
+| ------------------------ | -------: | ---------------------------------------------- |
+| `BOT_NAME`               | `YOROZU` | Nama device WhatsApp                           |
+| `MAX_CONCURRENT_JOBS`    |      `2` | Maksimal proses berat yang berjalan bersamaan  |
+| `REQUEST_TIMEOUT`        |  `30000` | Timeout downloader dalam milidetik             |
+| `STICKER_MAX_DURATION`   |     `10` | Maksimal durasi video/GIF sticker dalam detik  |
+| `STICKER_MAX_SIZE_MB`    |     `10` | Maksimal ukuran input sticker                  |
+| `GLOBAL_COOLDOWN`        |      `3` | Jeda global request berat per user dalam detik |
+| `TEMP_DIR`               | `./temp` | Folder file sementara                          |
+| `AUTH_DIR`               | `./auth` | Folder session WhatsApp                        |
+| `DOWNLOADER_API_URL`     |   kosong | URL API downloader                             |
+| `DOWNLOADER_API_KEY`     |   kosong | API key downloader                             |
+| `DOWNLOADER_MAX_SIZE_MB` |     `50` | Maksimal ukuran media hasil download           |
 
 ---
 
-# ▶️ Running the Bot
-
-Setelah dependencies terinstall, jalankan bot melalui terminal VS Code.
+# ▶️ Menjalankan Bot
 
 ### Production
 
@@ -250,7 +252,7 @@ Dari root repository:
 pnpm --filter yorozu run start
 ```
 
-Atau jika berada di folder bot:
+Atau dari folder bot:
 
 ```bash
 cd yorozu
@@ -259,7 +261,7 @@ pnpm start
 
 ### Development
 
-Untuk development dengan automatic restart:
+Untuk menjalankan bot dalam mode development:
 
 ```bash
 pnpm --filter yorozu run dev
@@ -276,47 +278,25 @@ Setelah bot dijalankan:
 3. Masuk ke **Perangkat tertaut**.
 4. Pilih **Tautkan perangkat**.
 5. Scan QR code yang muncul di terminal.
-6. Tunggu sampai bot berhasil terhubung.
+6. Tunggu sampai koneksi berhasil.
 
-Session WhatsApp akan disimpan di:
+Setelah pairing berhasil, session WhatsApp akan disimpan secara otomatis di:
 
 ```text
 auth/
 ```
 
-Pada restart berikutnya, session tersebut akan digunakan kembali sehingga biasanya tidak perlu scan QR lagi.
+Pada restart berikutnya, bot akan menggunakan session yang tersimpan sehingga biasanya tidak perlu scan QR kembali.
 
-> ⚠️ Jangan menghapus folder `auth/` jika masih ingin menggunakan session WhatsApp yang sudah terhubung.
-
----
-
-# ⏱️ Default Cooldown
-
-| Command          | Cooldown |
-| ---------------- | -------: |
-| `/tiktok`        |      15s |
-| `/ytmp3`         |      20s |
-| `/ytmp4`         |      20s |
-| `/sticker`       |      10s |
-| `/s`             |      10s |
-| `/stiker`        |      10s |
-| `/createsticker` |       5s |
-| `/menu`          |       3s |
-| `/help`          |       3s |
-| `/ping`          |       3s |
-
-Downloader dan sticker juga dibatasi oleh:
-
-```text
-MAX_CONCURRENT_JOBS
-GLOBAL_COOLDOWN
-```
-
-Hal ini membantu mengurangi spam request dan beban CPU/memory yang berlebihan.
+> **Catatan:** Folder `auth/` akan dibuat otomatis setelah bot melakukan pairing. Tidak perlu membuatnya secara manual.
 
 ---
 
-# 📁 Project Structure
+# 📁 Struktur Project
+
+Saat repository pertama kali dijalankan, folder `auth/` dan `temp/` belum tentu tersedia.
+
+### Sebelum Bot Dijalankan
 
 ```text
 yorozu/
@@ -330,46 +310,92 @@ yorozu/
 │   ├── config.js
 │   └── utils.js
 │
-├── .env.example
-├── auth/
-├── temp/
+├── .env
 └── package.json
 ```
 
-### Core Modules
+### Setelah Bot Dijalankan
 
-| File            | Responsibility                      |
-| --------------- | ----------------------------------- |
-| `index.js`      | WhatsApp connection & lifecycle     |
-| `handler.js`    | Message parsing & command execution |
-| `commands.js`   | Command definitions, menu & help    |
-| `downloader.js` | yt-dlp & TikTok fallback            |
-| `sticker.js`    | Sticker processing                  |
-| `limiter.js`    | Cooldown & request limits           |
-| `config.js`     | Environment configuration           |
-| `utils.js`      | Shared helper functions             |
+```text
+yorozu/
+├── src/
+│   ├── index.js
+│   ├── handler.js
+│   ├── commands.js
+│   ├── downloader.js
+│   ├── sticker.js
+│   ├── limiter.js
+│   ├── config.js
+│   └── utils.js
+│
+├── auth/              # Dibuat otomatis
+├── temp/              # Dibuat otomatis
+├── .env
+└── package.json
+```
+
+### `auth/`
+
+Folder `auth/` digunakan untuk menyimpan session WhatsApp.
+
+Folder ini akan dibuat otomatis ketika proses pairing dilakukan.
+
+### `temp/`
+
+Folder `temp/` digunakan untuk menyimpan file sementara selama proses:
+
+* Download TikTok
+* Download YouTube
+* Processing media
+* Pembuatan sticker
+* Konversi media menggunakan FFmpeg
+
+Folder `temp/` juga akan dibuat otomatis ketika bot membutuhkan temporary directory.
+
+File sementara akan dibersihkan secara otomatis setelah proses selesai.
+
+> 💡 **Kamu tidak perlu membuat folder `auth/` dan `temp/` secara manual.**
 
 ---
 
-# 🔐 Security & Privacy
+# ⏱️ Default Cooldown
 
-Jangan commit file atau folder berikut:
+| Command          | Cooldown |
+| ---------------- | -------: |
+| `/tiktok`        | 15 detik |
+| `/ytmp3`         | 20 detik |
+| `/ytmp4`         | 20 detik |
+| `/sticker`       | 10 detik |
+| `/s`             | 10 detik |
+| `/stiker`        | 10 detik |
+| `/createsticker` |  5 detik |
+| `/menu`          |  3 detik |
+| `/help`          |  3 detik |
+| `/ping`          |  3 detik |
+
+Selain cooldown per command, command downloader dan sticker juga dibatasi oleh:
 
 ```text
-.env
-auth/
-temp/
+MAX_CONCURRENT_JOBS
+GLOBAL_COOLDOWN
 ```
 
-Tambahkan ke `.gitignore`:
+Proteksi ini membantu mengurangi spam request dan penggunaan resource secara berlebihan.
 
-```gitignore
-.env
-auth/
-temp/
-```
+---
 
-Folder `auth/` berisi session WhatsApp dan harus dianggap sebagai data sensitif.
+# 🧩 Core Modules
+
+| File            | Responsibility                      |
+| --------------- | ----------------------------------- |
+| `index.js`      | WhatsApp connection & bot lifecycle |
+| `handler.js`    | Message parsing & command execution |
+| `commands.js`   | Command definitions, menu & help    |
+| `downloader.js` | Downloader & API integration        |
+| `sticker.js`    | Sticker processing                  |
+| `limiter.js`    | Cooldown & request limits           |
+| `config.js`     | Environment configuration           |
+| `utils.js`      | Shared utility functions            |
 
 ---
 
@@ -384,28 +410,32 @@ Download dapat gagal apabila:
 * Content membutuhkan login
 * Content dibatasi usia
 * Content dibatasi wilayah
-* URL tidak valid atau expired
+* URL tidak valid
+* URL sudah expired
 * Platform mengubah sistemnya
 * Ukuran file melebihi limit
+* Downloader API sedang tidak tersedia
 
-Jika `yt-dlp` gagal menangani link TikTok publik tertentu, YOROZU dapat mencoba fallback melalui TikWM.
+### TikTok Fallback
 
-> Fallback bergantung pada layanan pihak ketiga dan tidak menjamin semua URL dapat diproses.
+Untuk URL TikTok publik tertentu, YOROZU dapat menggunakan fallback downloader yang tersedia pada konfigurasi.
+
+Fallback bergantung pada ketersediaan layanan pihak ketiga dan tidak menjamin semua URL dapat diproses.
 
 File hasil download hanya disimpan sementara dan akan dihapus setelah proses selesai.
 
 ---
 
-# 🧹 Temporary Files
+# 🧹 Temporary File Cleanup
 
 YOROZU melakukan cleanup file sementara:
 
 * Saat startup
-* Setelah download selesai
+* Setelah proses download selesai
 * Setelah media berhasil dikirim
 * Setelah proses sticker selesai
 
-Hal ini mencegah folder `temp/` terus membesar.
+Hal ini membantu mencegah folder `temp/` terus bertambah besar.
 
 ---
 
@@ -415,33 +445,46 @@ Hal ini mencegah folder `temp/` terus membesar.
 
 Pastikan bot sedang berjalan dan periksa terminal VS Code.
 
-Jika ingin pairing ulang:
+```bash
+pnpm --filter yorozu run start
+```
+
+Jika ingin melakukan pairing ulang, hapus folder `auth/`.
+
+### Linux/macOS
 
 ```bash
 rm -rf auth
-pnpm --filter yorozu run start
 ```
 
-> Untuk Windows PowerShell:
+### Windows PowerShell
 
 ```powershell
 Remove-Item -Recurse -Force auth
+```
+
+Kemudian jalankan kembali bot:
+
+```bash
 pnpm --filter yorozu run start
 ```
 
-Perintah tersebut akan menghapus session WhatsApp yang tersimpan.
+Scan QR baru ketika muncul.
 
 ---
 
-## Session WhatsApp Rusak
+## WhatsApp Session Rusak
 
-Stop bot terlebih dahulu, kemudian hapus:
+Jika session mengalami masalah:
+
+1. Stop bot.
+2. Hapus folder `auth/`.
+3. Jalankan bot kembali.
+4. Scan QR baru.
 
 ```text
 auth/
 ```
-
-Setelah itu jalankan kembali bot dan scan QR baru.
 
 ---
 
@@ -454,37 +497,117 @@ yt-dlp --version
 ffmpeg -version
 ```
 
+Jika menggunakan downloader API, periksa konfigurasi:
+
+```env
+DOWNLOADER_API_URL=
+DOWNLOADER_API_KEY=
+```
+
 Kemudian coba URL publik lainnya.
 
 ---
 
 ## File Terlalu Besar
 
-Ubah konfigurasi di `.env`:
+Default:
+
+```env
+DOWNLOADER_MAX_SIZE_MB=50
+```
+
+Jika diperlukan, limit dapat dinaikkan:
 
 ```env
 DOWNLOADER_MAX_SIZE_MB=100
 ```
 
-> Gunakan nilai yang wajar karena file besar membutuhkan bandwidth, storage, CPU, dan memory lebih banyak.
+> ⚠️ File yang lebih besar membutuhkan bandwidth, storage, CPU, dan memory lebih banyak.
+
+---
+
+## `pnpm` Tidak Dikenali
+
+Periksa:
+
+```bash
+pnpm --version
+```
+
+Pastikan pnpm sudah terinstall dan tersedia pada system `PATH`.
+
+---
+
+## Node.js Version Terlalu Lama
+
+Periksa:
+
+```bash
+node --version
+```
+
+YOROZU membutuhkan:
+
+```text
+Node.js >= 20
+```
+
+---
+
+# 🖥️ Development with VS Code
+
+VS Code direkomendasikan untuk development karena menyediakan:
+
+* Integrated Terminal
+* JavaScript/Node.js IntelliSense
+* Debugging
+* Git integration
+* Syntax highlighting
+* Error diagnostics
+* File explorer
+* Extension ecosystem
+
+### Development Workflow
+
+```text
+Clone Repository
+       ↓
+Open with VS Code
+       ↓
+Install Dependencies
+       ↓
+Create .env
+       ↓
+Run Bot
+       ↓
+Scan WhatsApp QR
+       ↓
+Edit Source Code
+       ↓
+Test Commands
+```
+
+> **Note:** VS Code bukan runtime bot. Yang menjalankan YOROZU adalah **Node.js**, sedangkan VS Code digunakan sebagai code editor dan development environment.
+
+YOROZU juga dapat dijalankan melalui terminal biasa tanpa VS Code.
 
 ---
 
 # 🧪 Local Validation
 
-Periksa syntax semua file JavaScript:
+### Linux/macOS
 
 ```bash
 for file in src/*.js; do node --check "$file"; done
 ```
 
-Windows PowerShell:
+### Windows PowerShell
 
 ```powershell
 Get-ChildItem src\*.js | ForEach-Object { node --check $_.FullName }
 ```
 
-Periksa formatting Git:
+Check Git formatting:
 
 ```bash
 git diff --check
@@ -492,50 +615,21 @@ git diff --check
 
 ---
 
-# 🖥️ Development with VS Code
-
-VS Code direkomendasikan untuk mengembangkan YOROZU karena menyediakan:
-
-* Integrated Terminal
-* JavaScript/Node.js IntelliSense
-* Debugger
-* Git integration
-* Extension ecosystem
-* File explorer
-* Syntax highlighting
-* Error diagnostics
-
-Workflow development sederhana:
-
-```text
-Open Project
-     ↓
-Install Dependencies
-     ↓
-Configure .env
-     ↓
-Run Bot
-     ↓
-Scan WhatsApp QR
-     ↓
-Edit Source Code
-     ↓
-Restart / Dev Mode
-     ↓
-Test Command
-```
-
-> **Catatan:** VS Code bukan requirement runtime. Yang menjalankan bot adalah **Node.js**. Kamu tetap dapat menjalankan YOROZU dari terminal biasa tanpa VS Code.
-
----
-
 # ⚖️ Usage & Disclaimer
 
 YOROZU dibuat untuk tujuan pembelajaran dan penggunaan pribadi.
 
-Gunakan bot hanya untuk konten yang kamu miliki atau memang memiliki izin untuk mengunduhnya.
+Gunakan bot hanya untuk media yang:
 
-Developer tidak bertanggung jawab atas penyalahgunaan bot atau pelanggaran Terms of Service platform pihak ketiga.
+* Kamu miliki, atau
+* Kamu memiliki izin untuk mengakses dan mengunduhnya.
+
+Developer tidak bertanggung jawab atas:
+
+* Penyalahgunaan bot
+* Pelanggaran copyright
+* Pelanggaran Terms of Service platform pihak ketiga
+* Penggunaan bot untuk konten yang tidak memiliki izin
 
 ---
 
@@ -548,6 +642,10 @@ This project is licensed under the **MIT License**.
 # 🇬🇧 English
 
 YOROZU is a **Node.js + Baileys** WhatsApp bot for media downloading, sticker creation, and lightweight utility commands.
+
+The bot includes cooldowns, rate limiting, duplicate-request protection, concurrent job limits, automatic reconnect, and temporary-file cleanup.
+
+---
 
 ## ✨ Features
 
@@ -564,35 +662,91 @@ YOROZU is a **Node.js + Baileys** WhatsApp bot for media downloading, sticker cr
 * 🚦 Global cooldown
 * 🔒 Duplicate request protection
 * ⚙️ Concurrent job limits
-* 🔄 Automatic reconnect
+* 🔄 Automatic WhatsApp reconnect
 * 🧹 Automatic temporary-file cleanup
 
-## 📋 Commands
+---
 
-### Downloader
+# 📋 Command List
+
+## 📥 Downloader
+
+| Command         | Description                 |
+| --------------- | --------------------------- |
+| `/tiktok <url>` | Download TikTok video/photo |
+| `/ytmp3 <url>`  | Download YouTube audio      |
+| `/ytmp4 <url>`  | Download YouTube video      |
+
+### `/tiktok`
+
+Supports:
+
+* Public TikTok videos
+* TikTok photos
+* TikTok photo carousels
+
+Example:
 
 ```text
-/tiktok <url>
-/ytmp3 <url>
-/ytmp4 <url>
+/tiktok https://www.tiktok.com/@user/video/123456789
 ```
 
-### Stickers
+### `/ytmp3`
+
+Downloads YouTube audio in MP3 format.
 
 ```text
-/sticker
-/s
-/stiker
-/createsticker <text>
+/ytmp3 https://www.youtube.com/watch?v=xxxxxxxxxxx
 ```
 
-### System
+### `/ytmp4`
+
+Downloads YouTube video in MP4 format.
 
 ```text
-/menu
-/help
-/ping
+/ytmp4 https://youtu.be/xxxxxxxxxxx
 ```
+
+---
+
+## 🎨 Stickers
+
+| Command                 | Description         |
+| ----------------------- | ------------------- |
+| `/sticker`              | Create sticker      |
+| `/s`                    | Sticker shortcut    |
+| `/stiker`               | Sticker shortcut    |
+| `/createsticker <text>` | Create text sticker |
+
+For `/sticker`, you can:
+
+* Send an image with the command
+* Send a GIF with the command
+* Send a short video with the command
+* Reply to media and use `/sticker`
+
+### Default Limits
+
+| Type       |      Limit |
+| ---------- | ---------: |
+| Video/GIF  | 10 seconds |
+| Input file |      10 MB |
+
+Example:
+
+```text
+/createsticker Got caught!
+```
+
+---
+
+## ⚙️ System
+
+| Command | Description                |
+| ------- | -------------------------- |
+| `/menu` | Show command list          |
+| `/help` | Show command guide         |
+| `/ping` | Check bot status & latency |
 
 ---
 
@@ -604,7 +758,7 @@ Before running YOROZU, make sure you have:
 * **pnpm**
 * **FFmpeg**
 * **yt-dlp**
-* **Visual Studio Code** *(recommended for development)*
+* **Visual Studio Code** *(recommended)*
 * A WhatsApp account for pairing
 
 Check your environment:
@@ -616,23 +770,25 @@ yt-dlp --version
 ffmpeg -version
 ```
 
-> 💡 YOROZU can be run directly from **Visual Studio Code**. VS Code is used as the editor and terminal; the bot itself runs on Node.js.
-
 ---
 
 # 💻 Running YOROZU in VS Code
 
+YOROZU can be developed and run directly using **Visual Studio Code**.
+
 ## 1. Open the Repository
 
-Open the YOROZU repository in Visual Studio Code:
+Open the project using:
 
 ```text
 File → Open Folder
 ```
 
-Select the project directory.
+Select the YOROZU repository.
 
-## 2. Open the VS Code Terminal
+---
+
+## 2. Open the Terminal
 
 Use:
 
@@ -646,6 +802,10 @@ or:
 Ctrl + `
 ```
 
+Make sure the terminal is inside the repository directory.
+
+---
+
 ## 3. Install Dependencies
 
 From the repository root:
@@ -654,32 +814,72 @@ From the repository root:
 pnpm install
 ```
 
-If the bot is inside the `yorozu` directory:
+Or:
 
 ```bash
 cd yorozu
 pnpm install
 ```
 
-## 4. Configure Environment
+---
 
-Linux/macOS:
+## 4. Create `.env`
 
-```bash
-cp .env.example .env
+Create a file named:
+
+```text
+.env
 ```
 
-Windows PowerShell:
+Then add:
 
-```powershell
-Copy-Item .env.example .env
+```env
+BOT_NAME=YOROZU
+
+MAX_CONCURRENT_JOBS=2
+
+REQUEST_TIMEOUT=30000
+
+STICKER_MAX_DURATION=10
+
+STICKER_MAX_SIZE_MB=10
+
+GLOBAL_COOLDOWN=3
+
+TEMP_DIR=./temp
+
+AUTH_DIR=./auth
+
+DOWNLOADER_API_URL=
+
+DOWNLOADER_API_KEY=
+
+DOWNLOADER_MAX_SIZE_MB=50
 ```
 
-Edit `.env` if you need to change the default configuration.
+### Configuration
 
-## 5. Start the Bot
+| Variable                 |  Default | Description                         |
+| ------------------------ | -------: | ----------------------------------- |
+| `BOT_NAME`               | `YOROZU` | WhatsApp device name                |
+| `MAX_CONCURRENT_JOBS`    |      `2` | Maximum concurrent heavy processes  |
+| `REQUEST_TIMEOUT`        |  `30000` | Downloader timeout in milliseconds  |
+| `STICKER_MAX_DURATION`   |     `10` | Maximum video/GIF sticker duration  |
+| `STICKER_MAX_SIZE_MB`    |     `10` | Maximum sticker input size          |
+| `GLOBAL_COOLDOWN`        |      `3` | Global delay between heavy requests |
+| `TEMP_DIR`               | `./temp` | Temporary-file directory            |
+| `AUTH_DIR`               | `./auth` | WhatsApp session directory          |
+| `DOWNLOADER_API_URL`     |    empty | Downloader API URL                  |
+| `DOWNLOADER_API_KEY`     |    empty | Downloader API key                  |
+| `DOWNLOADER_MAX_SIZE_MB` |     `50` | Maximum downloaded media size       |
 
-Production:
+---
+
+# ▶️ Running the Bot
+
+### Production
+
+From the repository root:
 
 ```bash
 pnpm --filter yorozu run start
@@ -692,7 +892,7 @@ cd yorozu
 pnpm start
 ```
 
-Development:
+### Development
 
 ```bash
 pnpm --filter yorozu run dev
@@ -702,61 +902,329 @@ pnpm --filter yorozu run dev
 
 # 📱 WhatsApp Pairing
 
-1. Start the bot from the VS Code terminal.
-2. Wait for the QR code.
-3. Open **WhatsApp → Linked devices**.
+After starting the bot:
+
+1. Wait for the QR code in the VS Code terminal.
+2. Open **WhatsApp** on your phone.
+3. Go to **Linked devices**.
 4. Select **Link a device**.
 5. Scan the QR code.
-6. The session will be stored in `auth/`.
+6. Wait until the connection is established.
+
+After pairing, the WhatsApp session is automatically stored in:
+
+```text
+auth/
+```
 
 The saved session will normally be reused after restarting the bot.
 
+> **Note:** The `auth/` folder is created automatically after WhatsApp pairing. You do not need to create it manually.
+
 ---
 
-# 🔐 Security
+# 📁 Project Structure
 
-Never commit:
+When the repository is first started, the `auth/` and `temp/` directories may not exist yet.
+
+### Before Running the Bot
 
 ```text
-.env
-auth/
-temp/
+yorozu/
+├── src/
+│   ├── index.js
+│   ├── handler.js
+│   ├── commands.js
+│   ├── downloader.js
+│   ├── sticker.js
+│   ├── limiter.js
+│   ├── config.js
+│   └── utils.js
+│
+├── .env
+└── package.json
 ```
 
-The `auth/` directory contains the WhatsApp session and should be treated as sensitive data.
+### After Running the Bot
+
+```text
+yorozu/
+├── src/
+│   ├── index.js
+│   ├── handler.js
+│   ├── commands.js
+│   ├── downloader.js
+│   ├── sticker.js
+│   ├── limiter.js
+│   ├── config.js
+│   └── utils.js
+│
+├── auth/              # Generated automatically
+├── temp/              # Generated automatically
+├── .env
+└── package.json
+```
+
+### `auth/`
+
+Stores WhatsApp authentication/session data.
+
+This directory is automatically created during the pairing process.
+
+### `temp/`
+
+Stores temporary files used during:
+
+* TikTok downloads
+* YouTube downloads
+* Media processing
+* Sticker creation
+* FFmpeg conversion
+
+The `temp/` directory is also created automatically when required.
+
+Temporary files are automatically cleaned after processing.
+
+> 💡 **You do not need to manually create `auth/` or `temp/`.**
+
+---
+
+# ⏱️ Default Cooldowns
+
+| Command          |   Cooldown |
+| ---------------- | ---------: |
+| `/tiktok`        | 15 seconds |
+| `/ytmp3`         | 20 seconds |
+| `/ytmp4`         | 20 seconds |
+| `/sticker`       | 10 seconds |
+| `/s`             | 10 seconds |
+| `/stiker`        | 10 seconds |
+| `/createsticker` |  5 seconds |
+| `/menu`          |  3 seconds |
+| `/help`          |  3 seconds |
+| `/ping`          |  3 seconds |
+
+Downloader and sticker commands are also controlled by:
+
+```text
+MAX_CONCURRENT_JOBS
+GLOBAL_COOLDOWN
+```
+
+---
+
+# 🧩 Core Modules
+
+| File            | Responsibility                      |
+| --------------- | ----------------------------------- |
+| `index.js`      | WhatsApp connection & bot lifecycle |
+| `handler.js`    | Message parsing & command execution |
+| `commands.js`   | Command definitions, menu & help    |
+| `downloader.js` | Downloader & API integration        |
+| `sticker.js`    | Sticker processing                  |
+| `limiter.js`    | Cooldown & request limits           |
+| `config.js`     | Environment configuration           |
+| `utils.js`      | Shared utility functions            |
 
 ---
 
 # 📥 Downloader Limitations
 
-Only use public media that you are authorized to access and download.
+The downloader is intended for public media that you are authorized to access and download.
 
-Downloads may fail for:
+Downloads may fail because of:
 
-* Private content
-* Deleted media
-* Login-required content
-* Age-restricted content
-* Region-restricted content
-* Invalid or expired URLs
+* Private media
+* Deleted content
+* Login requirements
+* Age restrictions
+* Region restrictions
+* Invalid URLs
+* Expired URLs
 * Platform changes
 * Files exceeding the configured limit
+* Downloader API downtime
 
-YOROZU may use a TikWM fallback for certain public TikTok URLs when `yt-dlp` fails.
+### TikTok Fallback
+
+For certain public TikTok URLs, YOROZU may use the configured downloader fallback.
 
 Third-party fallback availability is not guaranteed.
+
+Downloaded files are stored temporarily and deleted after processing.
+
+---
+
+# 🧹 Temporary File Cleanup
+
+YOROZU automatically cleans temporary files:
+
+* At startup
+* After downloads
+* After media is sent
+* After sticker processing
+
+This prevents the `temp/` directory from continuously growing.
+
+---
+
+# 🩺 Troubleshooting
+
+## QR Code Does Not Appear
+
+Make sure the bot is running and check the VS Code terminal.
+
+```bash
+pnpm --filter yorozu run start
+```
+
+To pair again, delete the `auth/` directory.
+
+### Linux/macOS
+
+```bash
+rm -rf auth
+```
+
+### Windows PowerShell
+
+```powershell
+Remove-Item -Recurse -Force auth
+```
+
+Then restart the bot:
+
+```bash
+pnpm --filter yorozu run start
+```
+
+Scan the new QR code.
+
+---
+
+## WhatsApp Session Is Corrupted
+
+1. Stop the bot.
+2. Delete `auth/`.
+3. Start the bot again.
+4. Scan a new QR code.
+
+---
+
+## Downloader Failure
+
+Check:
+
+```bash
+yt-dlp --version
+ffmpeg -version
+```
+
+If using a downloader API, check:
+
+```env
+DOWNLOADER_API_URL=
+DOWNLOADER_API_KEY=
+```
+
+Then try another public URL.
+
+---
+
+## File Too Large
+
+Default:
+
+```env
+DOWNLOADER_MAX_SIZE_MB=50
+```
+
+Increase carefully if necessary:
+
+```env
+DOWNLOADER_MAX_SIZE_MB=100
+```
+
+Larger files require more bandwidth, storage, CPU, and memory.
+
+---
+
+## `pnpm` Is Not Recognized
+
+Check:
+
+```bash
+pnpm --version
+```
+
+Make sure pnpm is installed and available in the system `PATH`.
+
+---
+
+## Node.js Version Is Too Old
+
+Check:
+
+```bash
+node --version
+```
+
+YOROZU requires:
+
+```text
+Node.js >= 20
+```
+
+---
+
+# 🖥️ Development with VS Code
+
+VS Code provides:
+
+* Integrated Terminal
+* JavaScript/Node.js IntelliSense
+* Debugging
+* Git integration
+* Syntax highlighting
+* Error diagnostics
+* File explorer
+* Extension ecosystem
+
+### Development Workflow
+
+```text
+Clone Repository
+       ↓
+Open with VS Code
+       ↓
+Install Dependencies
+       ↓
+Create .env
+       ↓
+Run Bot
+       ↓
+Scan WhatsApp QR
+       ↓
+Edit Source Code
+       ↓
+Test Commands
+```
+
+> **Note:** VS Code is not the runtime. **Node.js runs YOROZU**, while VS Code provides the development environment and integrated terminal.
+
+YOROZU can also be started from a normal system terminal without VS Code.
 
 ---
 
 # 🧪 Local Validation
 
-Linux/macOS:
+### Linux/macOS
 
 ```bash
 for file in src/*.js; do node --check "$file"; done
 ```
 
-Windows PowerShell:
+### Windows PowerShell
 
 ```powershell
 Get-ChildItem src\*.js | ForEach-Object { node --check $_.FullName }
@@ -770,50 +1238,21 @@ git diff --check
 
 ---
 
-# 🖥️ VS Code Development
-
-VS Code provides:
-
-* Integrated terminal
-* Node.js/JavaScript IntelliSense
-* Debugging
-* Git integration
-* Syntax highlighting
-* Error diagnostics
-* File explorer
-
-Development workflow:
-
-```text
-Open Project
-     ↓
-Install Dependencies
-     ↓
-Configure .env
-     ↓
-Run Bot
-     ↓
-Scan WhatsApp QR
-     ↓
-Edit Source Code
-     ↓
-Test Commands
-```
-
-> **Note:** VS Code is not the runtime. **Node.js** runs the bot. YOROZU can also be started from a normal system terminal.
-
----
-
-# ⚖️ Disclaimer
+# ⚖️ Usage & Disclaimer
 
 YOROZU is intended for educational and personal use.
 
-Only download content that you own or have permission to download.
+Only download media that you own or have permission to access and download.
 
-The developer is not responsible for misuse of the bot or violations of third-party platform Terms of Service.
+The developer is not responsible for:
+
+* Misuse of the bot
+* Copyright violations
+* Violations of third-party platform Terms of Service
+* Unauthorized downloading or distribution of media
 
 ---
 
 # 📄 License
 
-MIT
+This project is licensed under the **MIT License**.
